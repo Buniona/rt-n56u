@@ -1,18 +1,20 @@
-name: Build MT7628
+name: MI-NANO
 
 on: 
   release:
     types: [published]
-#  push:
-#    tags:
-#    - 'v*'
+  push:
+    tags:
+    - 'v*'
   #  branches: 
   #    - master
 #  schedule:
-#    - cron: 0 17 * * 4
-#  watch:
-#    types: [started]
-
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
+ # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-18.04
